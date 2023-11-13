@@ -1,0 +1,45 @@
+version: '3.9'
+services:
+  web:
+    build: .
+    command: bash -c 'pnpm install && pnpm run dev --host'
+    ports:
+      - 5173:5173
+      - 3140:3140
+      - 9315:9315
+    working_dir: '/shellakybookies-site'
+    expose:
+      - 5173
+      - 3140
+      - 9315
+    volumes:
+      - '.:/shellakybookies-site'
+      - node_modules:/shellakybookies-site/node_modules
+      - pnpm-store:/shellakybookies-site/.pnpm-store
+      - svelte-kit:/shellakybookies-site/.svelte-kit
+    environment:
+      - VITE_ENVIRONMENT=development
+    # env_file:
+    #   - .env
+  # sanity:
+  #   build: .
+  #   command: bash -c 'pnpm install && pnpm run dev --host --port 3333'
+  #   ports:
+  #     - 3333:3333
+  #   working_dir: '/sanity'
+  #   expose:
+  #     - 3333
+  #   volumes:
+  #     - './sanity:/sanity'
+  #     - 'sanity_node_modules:/sanity/node_modules'
+  #     - 'sanity_pnpm-store:/sanity/.pnpm-store'
+  #     - 'sanity:/sanity/.sanity'
+  #   # env_file:
+  #   #   - sanity/.env
+volumes:
+  node_modules:
+  pnpm-store:
+  svelte-kit:
+  # sanity_node_modules:
+  # sanity_pnpm-store:
+  # sanity:

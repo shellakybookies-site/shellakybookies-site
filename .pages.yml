@@ -1,38 +1,38 @@
 content:
-	- name: pages
-		label: Pages
-		path: src/lib/content/pages
-		type: collection
-		filename: '{name}.md'
-		subfolders: false
-	- name: posts
-		label: Posts
-		path: src/lib/content/posts
-		type: collection
-		filename: '{year}-{month}-{day}-{primary}.md'
-		subfolders: false
-		fields:
-			- name: date
-				label: Date
-				type: date
-			- name: title
-				label: Title
-				type: string
-			- name: body
-				label: Body
-				type: rich-text
-	- name: menu
-		label: Menu
-		path: src/lib/content/menu.md
-		fields:
-			- name: links
-				label: Links
-				type: object
-				list: true
-				fields:
-					- name: label
-						label: Link Label
-						type: string
-					- name: url
-						label: Link URL
-						type: string
+  - name: pages
+    label: Pages
+    path: src/lib/content/pages
+    type: collection
+    filename: '{name}.md'
+    subfolders: false
+  - name: posts
+    label: Posts
+    path: src/lib/content/posts
+    type: collection
+    filename: '{year}-{month}-{day}-{primary}.md'
+    subfolders: false
+    fields:
+      - name: date
+        label: Date
+        type: date
+      - name: title
+        label: Title
+        type: string
+      - name: body
+        label: Body
+        type: rich-text
+  - name: menu
+    label: Menu
+    path: src/lib/content/menu.md
+    fields:
+      - name: links
+        label: Links
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Link Label
+            type: string
+          - name: url
+            label: Link URL
+            type: string

@@ -1,33 +1,27 @@
 <script>
-	import '@fontsource/vesper-libre/400.css';
-	import '@fontsource/vesper-libre/500.css';
-	import '@fontsource/vesper-libre/700.css';
-	import '@fontsource/vesper-libre/900.css';
-	import '@fontsource/metamorphous';
-	import '../app.css';
+	import '@picocss/pico/css/pico.jade.css';
 </script>
 
-<header class="bg-neutral-800">
-	<h1 class="h1 py-3 text-center text-2xl font-light text-gold-600">
-		The Shellakybookies
-	</h1>
-	<nav></nav>
+<header class="container">
+	<nav>
+		<ul>
+			<strong>TITLE HERE</strong>
+		</ul>
+		<ul>
+			<li>
+				<details class="dropdown">
+					<summary>Menu</summary>
+					<ul dir="rtl">
+						<li><a href="#">Profile</a></li>
+						<li><a href="#">Settings</a></li>
+						<li><a href="#">Security</a></li>
+						<li><a href="#">Logout</a></li>
+					</ul>
+				</details>
+			</li>
+		</ul>
+	</nav>
 </header>
-
-<main class="grow bg-green-900">
+<main class="container">
 	<slot />
 </main>
-
-<footer class="bg-neutral-800">Fuck</footer>
-
-<style lang="postcss">
-	:global(html) {
-		color-scheme: dark light;
-	}
-
-	:global(body) {
-		display: flex;
-		flex-direction: column;
-		min-height: 100dvh;
-	}
-</style>

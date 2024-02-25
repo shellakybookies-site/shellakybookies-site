@@ -18,6 +18,7 @@ content:
         type: rich-text
   - name: menu
     label: Menu
+    type: file
     path: src/lib/content/menu.md
     fields:
       - name: links

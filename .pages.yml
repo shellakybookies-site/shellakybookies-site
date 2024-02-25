@@ -16,15 +16,15 @@ content:
       - name: body
         label: Body
         type: rich-text
-  - name: menu
-    label: Menu
-    type: file
+  - name: menu_items
+    label: Menu Items
+    type: collection
     path: src/lib/content/menu.md
     fields:
       - name: links
         label: Links
+        description: Should be some label/url pairs to generate links
         type: object
-        list: true
         fields:
           - name: label
             label: Link Label

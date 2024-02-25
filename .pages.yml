@@ -16,9 +16,9 @@ content:
       - name: body
         label: Body
         type: rich-text
-  - name: menu_items
-    label: Menu Items
-    type: collection
+  - name: menu
+    label: Menu
+    type: file
     path: src/lib/content/menu.md
     fields:
       - name: links

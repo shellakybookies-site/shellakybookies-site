@@ -1,10 +1,5 @@
 content:
-  - name: pages
-    label: Pages
-    path: src/lib/content/pages
-    type: collection
-    filename: '{name}.md'
-    subfolders: false
+
   - name: posts
     label: Posts
     path: src/lib/content/posts

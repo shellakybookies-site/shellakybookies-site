@@ -21,10 +21,15 @@ content:
     type: file
     path: src/lib/content/menu.md
     fields:
+      - name: title
+        label: Menu Title
+        type: string
+        default: Menu
       - name: links
         label: Links
         description: Should be some label/url pairs to generate links
         type: object
+        list: true
         fields:
           - name: label
             label: Link Label

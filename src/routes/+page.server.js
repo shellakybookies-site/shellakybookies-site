@@ -1,3 +1,5 @@
+export const prerender = true;
+
 /** @type {import('./$types').PageServerLoad} */
 export const load = async () => {
 	const date_files = import.meta.glob('$lib/content/dates/*.md');

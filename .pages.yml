@@ -3,8 +3,7 @@ content:
     label: Dates
     path: src/lib/content/dates
     type: collection
-    filename: >
-      "{fields.date.split('T')[0]}.md"
+    filename: {fields.date}.md
     subfolders: false
     fields:
       - name: date

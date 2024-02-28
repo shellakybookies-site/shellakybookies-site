@@ -1,6 +1,5 @@
 ---
 title: Menu
-layout: menu
 links:
   - label: Google Doc
     url: https://google.com

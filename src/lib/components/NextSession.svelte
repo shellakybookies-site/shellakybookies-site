@@ -21,8 +21,6 @@
 		);
 	}
 
-	$inspect(dates);
-	$inspect(now);
 	let today_formatted = $derived(date_to_day_str(now));
 
 	let next_thursday = $derived.by(() => {
@@ -33,7 +31,6 @@
 		);
 		return date_to_day_str(next_thurs);
 	});
-	$inspect(today_formatted, next_thursday);
 
 	let dynamic_component = $derived(
 		// @ts-ignore

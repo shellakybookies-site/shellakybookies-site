@@ -1,10 +1,9 @@
 content:
-
-  - name: posts
-    label: Posts
-    path: src/lib/content/posts
+  - name: dates
+    label: Dates
+    path: src/lib/content/dates
     type: collection
-    filename: '{year}-{month}-{day}-{primary}.md'
+    filename: '{fields.date.split('T')[0]}.md'
     subfolders: false
     fields:
       - name: date

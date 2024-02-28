@@ -1,25 +1,15 @@
 <script>
 	import '@picocss/pico/css/pico.jade.css';
+	import '@picocss/pico/css/pico.colors.css';
+	import Menu from '$lib/components/Menu.svelte';
 </script>
 
 <header class="container">
 	<nav>
 		<ul>
-			<strong>TITLE HERE</strong>
+			<strong class="pico-color-jade-500">Shellakybookies</strong>
 		</ul>
-		<ul>
-			<li>
-				<details class="dropdown">
-					<summary>Menu</summary>
-					<ul dir="rtl">
-						<li><a href="#">Profile</a></li>
-						<li><a href="#">Settings</a></li>
-						<li><a href="#">Security</a></li>
-						<li><a href="#">Logout</a></li>
-					</ul>
-				</details>
-			</li>
-		</ul>
+		<Menu />
 	</nav>
 </header>
 <main class="container">

@@ -3,7 +3,7 @@ content:
     label: Dates
     path: src/lib/content/dates
     type: collection
-    filename: {fields.date}.md
+    filename: '{fields.date}.md'
     subfolders: false
     fields:
       - name: date

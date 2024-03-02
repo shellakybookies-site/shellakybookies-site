@@ -17,9 +17,20 @@
 		);
 	}
 
+	/** @param {number} number */
+	function two_digit_str(number) {
+		return number.toLocaleString('en-US', {
+			minimumIntegerDigits: 2,
+			useGrouping: false
+		})
+	}
+
 	/** @param {Date} date */
 	function formate_date(date) {
-		return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+		const year = date.getFullYear();
+		const month = two_digit_str(date.getMonth() + 1);
+		const day = two_digit_str(date.getDate());
+		return `${year}-${month}-${day}`;
 	}
 
 	/** @param {Date} date */

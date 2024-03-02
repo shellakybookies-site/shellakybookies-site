@@ -1,25 +1,11 @@
 <script>
 	import { page } from '$app/stores';
-	// import { Date } from 'svelte/reactivity';
 
-	let dates = $state($page.data.dates);
+	// let dates = $state($page.data.dates);
 	let components = $state($page.data.components);
-
-	/** @param {string} name */
-	function better_log(name) {
-		/**
-		 * @param {string} type
-		 * @param {any} value
-		 * */
-		return (type, value) => {
-			console.log(`${type}:${name}:`, value);
-		};
-	}
 
 	let browser_now = $state();
 	let calgary_now = $derived(browser_now && in_calgary(browser_now));
-	$inspect(browser_now).with(better_log('browser_now'));
-	$inspect(calgary_now).with(better_log('calgary_now'));
 
 	/**
 	 * @param {Date} date
@@ -43,11 +29,11 @@
 			throw new Error('Input must be a Date object');
 		}
 
-		// Get the day of the week (0-6)
-		const dayOfWeek = date.getDay();
+		const dayOfWeek = date.getDay(); // Get the day of the week (0-6)
 
-		// Calculate how many days to add to get to the next Thursday
-		// If today is Thursday (4), don't add any days; otherwise, calculate the difference
+		// Calculate how many days to add to get to the next Thursday.
+		// If today is Thursday (4) don't add any days, otherwise calculate
+		// the difference
 		let daysToAdd = dayOfWeek === 4 ? 0 : (4 - dayOfWeek + 7) % 7;
 
 		// Create a new Date object for the next Thursday
@@ -58,16 +44,13 @@
 	}
 
 	let today_formatted = $derived(calgary_now && formate_date(calgary_now));
-	$inspect(today_formatted).with(better_log('today_formatted'));
 
 	let next_thursday = $derived(
 		calgary_now && formate_date(get_next_thursday(calgary_now))
 	);
-	$inspect(next_thursday).with(better_log('next_thrusday'));
 
 	let dynamic_component = $derived(
-		// @ts-ignore
-		today_formatted && components[next_thursday]
+		today_formatted && next_thursday && components[next_thursday]
 	);
 
 	$effect(() => {

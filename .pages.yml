@@ -1,4 +1,12 @@
 content:
+  - name: home
+    label: Home Page
+    path: src/lib/content/home.md
+    type: file
+    fields:
+      - name: body
+        label: Body
+        type: rich-text
   - name: dates
     label: Dates
     path: src/lib/content/dates

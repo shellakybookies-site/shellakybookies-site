@@ -8,20 +8,21 @@
 	import '@picocss/pico/css/pico.colors.css';
 	import Menu from '$lib/components/Menu.svelte';
 	import CalendarIcon from '$lib/components/CalendarIcon.svelte';
+	import { base } from '$app/paths';
 </script>
 
 <header class="container">
 	<nav>
 		<ul>
 			<li>
-				<a href="/">
+				<a href="{base}/">
 					<h1 class="pico-color-jade-500">Shellakybookies</h1>
 				</a>
 			</li>
 		</ul>
 		<ul>
 			<li>
-				<a href="/calendar">
+				<a href="{base}/calendar">
 					<CalendarIcon height="2.75rem" width="2.75rem" />
 				</a>
 			</li>

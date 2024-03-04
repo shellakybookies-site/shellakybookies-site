@@ -11,6 +11,10 @@
 	import { base } from '$app/paths';
 </script>
 
+<svelte:head>
+	<title>Shellakybookies Galore!</title>
+</svelte:head>
+
 <header class="container">
 	<nav>
 		<ul>

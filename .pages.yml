@@ -7,6 +7,14 @@ content:
       - name: body
         label: Body
         type: rich-text
+  - name: placeholder
+    label: No Event Placeholder
+    path: src/lib/content/placeholder.md
+    type: file
+    fields:
+      - name: body
+        label: Body
+        type: rich-text
   - name: dates
     label: Dates
     path: src/lib/content/dates

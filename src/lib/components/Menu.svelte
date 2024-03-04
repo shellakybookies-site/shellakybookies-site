@@ -15,3 +15,11 @@
 		</details>
 	</li>
 </ul>
+
+<style>
+	ul {
+		font-family: system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+			Helvetica, Arial, 'Helvetica Neue', sans-serif,
+			var(--pico-font-family-emoji);
+	}
+</style>

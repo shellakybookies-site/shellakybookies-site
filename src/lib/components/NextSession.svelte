@@ -1,37 +1,13 @@
 <script>
 	import { page } from '$app/stores';
+	import { in_calgary, formate_date } from '$lib/utils/date-utils';
+	// @ts-ignore
+	import Placeholder from '$lib/content/placeholder.md';
 
-	// let dates = $state($page.data.dates);
 	let components = $state($page.data.components);
 
 	let browser_now = $state();
 	let calgary_now = $derived(browser_now && in_calgary(browser_now));
-
-	/**
-	 * @param {Date} date
-	 * @returns {Date | undefined}
-	 * */
-	function in_calgary(date) {
-		return new Date(
-			date.toLocaleString('en-US', { timeZone: 'America/Edmonton' })
-		);
-	}
-
-	/** @param {number} number */
-	function two_digit_str(number) {
-		return number.toLocaleString('en-US', {
-			minimumIntegerDigits: 2,
-			useGrouping: false
-		})
-	}
-
-	/** @param {Date} date */
-	function formate_date(date) {
-		const year = date.getFullYear();
-		const month = two_digit_str(date.getMonth() + 1);
-		const day = two_digit_str(date.getDate());
-		return `${year}-${month}-${day}`;
-	}
 
 	/** @param {Date} date */
 	function get_next_thursday(date) {
@@ -75,6 +51,6 @@
 	{#if dynamic_component}
 		<svelte:component this={dynamic_component} />
 	{:else}
-		<p>Same plans as usual</p>
+		<Placeholder />
 	{/if}
 </article>

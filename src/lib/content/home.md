@@ -23,6 +23,3 @@
 *   Tam Lin ( Ador ) ( [Music](https://thesession.org/tunes/248) ), Mason's Apron ( Amaj ) ( [Music](https://thesession.org/tunes/74) )
     
 *   Tobin's Favorite ( Dmaj ) ( [Music](https://thesession.org/tunes/308#setting35356) ), Geese in The Bog ( Amin ) ( [Music](https://thesession.org/tunes/43) )
-    
-
-* * *

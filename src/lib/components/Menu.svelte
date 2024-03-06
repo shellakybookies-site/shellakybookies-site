@@ -1,15 +1,21 @@
 <script>
-	// @ts-ignore doesn't like importing yaml files
+	// @ts-ignore doesn't like importing md files
 	import { metadata } from '$lib/content/menu.md';
+
+	let open = $state(false);
+
+	function onclick() {
+		open = false;
+	}
 </script>
 
 <ul>
 	<li>
-		<details class="dropdown">
+		<details class="dropdown" bind:open>
 			<summary>{metadata.title}</summary>
 			<ul dir="rtl">
 				{#each metadata.links as link}
-					<li><a href={link.url}>{link.label}</a></li>
+					<li><a href={link.url} {onclick}>{link.label}</a></li>
 				{/each}
 			</ul>
 		</details>

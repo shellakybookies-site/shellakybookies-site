@@ -24,7 +24,7 @@ export default class BuildWatcher {
 					this.conclusion = runs.workflow_runs[0].conclusion;
 					if (['queued', 'in_progress'].includes(this.status)) {
 						// if it looks like it's building, wait 5 seconds and try again
-						setTimeout(this.update, 5000);
+						setTimeout(this.update.bind(this), 5000);
 					}
 				}
 			}

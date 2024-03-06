@@ -132,6 +132,16 @@
 </section>
 
 <style>
+	dialog article {
+		max-height: 100dvh;
+		overflow-y: scroll;
+	}
+
+	dialog article header {
+		position: sticky;
+		top: calc(var(--pico-block-spacing-vertical) * -1);
+	}
+
 	@media (max-width: 767px) {
 		section {
 			--pico-form-element-spacing-horizontal: 0.5rem;

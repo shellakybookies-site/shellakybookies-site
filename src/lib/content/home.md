@@ -2,8 +2,6 @@
 ---
 # St Patrick's Day
 
-* * *
-
 ## **_Sets_**
 
 *   Musical Priest ( Bmin ) ( [Music](https://thesession.org/tunes/73) ), Mountain Rd ( Dmaj ) ( [Music](https://thesession.org/tunes/68) )

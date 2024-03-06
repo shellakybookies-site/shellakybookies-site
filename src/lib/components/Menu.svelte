@@ -1,6 +1,7 @@
 <script>
 	// @ts-ignore doesn't like importing md files
 	import { metadata } from '$lib/content/menu.md';
+	import BuildWatcher from './BuildWatcher.svelte';
 
 	let open = $state(false);
 
@@ -17,6 +18,7 @@
 				{#each metadata.links as link}
 					<li><a href={link.url} {onclick}>{link.label}</a></li>
 				{/each}
+				<li dir="ltr"><BuildWatcher /></li>
 			</ul>
 		</details>
 	</li>
